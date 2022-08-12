@@ -1,0 +1,175 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    font-size: 1.25em;
+}
+
+header{
+    width: 100%;
+   
+}
+
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.10em;
+}
+.page-title{
+    background-color: yellowgreen;
+    color: aliceblue;
+    padding: 1em;
+}
+
+.menu-title{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    color: white;
+}
+
+.page-container{
+    display: grid;
+    grid-template-areas: "nav" "main";
+    grid-template-columns: 0.5fr 3fr;
+
+}
+
+nav{
+    background-color: olive;
+    width: 100%;
+}
+
+.menu-container{
+    width: 100%;
+    
+}
+
+ul{
+    list-style: none;
+    width: 100%;
+    background-color: antiquewhite;
+    padding: 0px;
+    
+}
+
+li{
+
+    padding: 0.25em;
+    border-bottom: 1px solid black;
+    
+}
+
+
+main{
+    display: grid;
+    height: 100vh;
+}
+
+.list
+{
+    display: grid;
+    background-color: lightgray;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 25px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border: solid 1px black;
+    border-radius: 4%;
+    width: 90%;
+    height: 55%;
+    margin: 5px;
+}
+
+img{
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+}
+footer{
+    background-color: lightyellow;
+    padding: 1em;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .toolbar{
+        display: none;
+    }
+    
+    .page-container{
+    display: grid;
+    grid-template-areas: "nav"
+                        "main";
+    grid-template-columns: 1fr;
+    }
+
+    .list
+    {
+    display: grid;
+    background-color: lightgray;
+    grid-template-columns: 1fr;
+    }
+
+    .card {
+    
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    align-items: center;
+    justify-content: start;
+    gap: 2px;
+    border: none;
+    border-radius: 0%;
+    width: 95%;
+    height: 90%;
+    margin: 5px;
+    margin-top: 35px;
+    padding: 5px;
+    }
+
+    img  {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    }
+   
+    ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    background-color: olive;
+    position: fixed;
+    padding: 2%;
+    margin: 0px;
+    }
+
+    li{
+    background-color: lightyellow;
+    border: solid 1px black;
+    }
+
+    .menu-title{
+    display: none; 
+    }
+
+    nav{
+    background-color: olive;
+    width: 100%;
+    }
+
+    footer{
+    display: none;
+    }
+   
+
+}
